@@ -70,7 +70,7 @@ const CustomModal = ({ isOpenCustom, closeCustomModal }) => {
                   </label>
 
                   <div className="input__grid grid grid-cols-4 py-4 gap-2 px-6">
-                    <button onKeyDown={e => console.log(e)}
+                    <button
                      className="border-2 p-4 bg-gray-100 elegant flex-center text-center hover:bg-gray-200">1</button>
                     <button className="border-2 p-4 bg-gray-100 elegant flex-center text-center hover:bg-gray-200">2</button>
                     <button className="border-2 p-4 bg-gray-100 elegant flex-center text-center hover:bg-gray-200">3</button>

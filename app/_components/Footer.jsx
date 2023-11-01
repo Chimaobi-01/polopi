@@ -3,7 +3,7 @@ import { HiOutlineQuestionMarkCircle } from 'react-icons/hi'
 
 const Footer = ({ total, price, question, openAppModal }) => {
   return (
-    <footer className={!question ? 'px-6': 'p-4 absolute bottom-0 left-0 w-full'}>
+    <footer className={!question ? 'px-6 pb-4': 'p-4 absolute bottom-0 left-0 w-full'}>
         <div className='flex-between elegant py-2'>
           <p>{total}</p>
           <p>$ {price}</p>
