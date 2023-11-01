@@ -12,6 +12,11 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .logout_icon {
     transform: rotateY(180deg);
 }
