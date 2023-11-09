@@ -2,40 +2,655 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokFont;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.otf?_default_font=1&v=2) format("opentype")
 }
-.flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokFont;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Semibold.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Semibold.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Semibold.otf?_default_font=1&v=2) format("opentype")
 }
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logout_icon {
-    transform: rotateY(180deg);
-}
-.elegant {
-    font-size: 5vw;
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokFont;
+    font-style: normal;
     font-weight: 700;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.otf?_default_font=1&v=2) format("opentype")
 }
-.price__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokDisplayFont;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Regular.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Regular.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Regular.otf?_default_font=1&v=2) format("opentype")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokDisplayFont;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Semibold.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Semibold.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Semibold.otf?_default_font=1&v=2) format("opentype")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: TikTokDisplayFont;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Bold.woff2?_default_font=1&v=2) format("woff2"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Bold.woff?_default_font=1&v=2) format("woff"),url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokDisplayFont-Bold.otf?_default_font=1&v=2) format("opentype")
+}
+
+html {
+    font-family: TikTokFont,system-ui,-apple-system,Roboto,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+}
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-size: 14px;
+    color: rgb(22, 24, 35);
+    background-color: rgb(255, 255, 255);
+    overscroll-behavior: contain;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    text-rendering: optimizespeed;
+    line-height: 1.5;
+}
+body a:visited {
+    color: rgb(22, 24, 35);
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+
+
+
+
+.DivLayoutContainer {
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+}
+
+
+
+.HeaderLayout {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 44px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(22, 24, 35, 0.2);
+    z-index: 2;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.DivBackButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(22, 24, 35);
+    height: 44px;
+    width: 50px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
+    left: 0px;
 }
-.btn__container {
+
+.DivLayoutTitle {
+    color: rgb(22, 24, 35);
+    font-family: TikTokFont;
+    font-weight: 700;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+}
+
+.DivExtraButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(22, 24, 35);
+    height: 44px;
+    margin-inline-end: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    right: 0px;
+}
+
+
+
+/* Main Starts */
+
+.DivLayoutEntity {
+    width: 100%;
+    padding: 65px 16px 125px;
+    overflow: hidden auto;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+}
+
+.DivBannerWrapper {
+    margin: -20px 0px 16px;
+}
+
+.DivProfileInfoWrapper {
+    width: 100vw;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: rgba(22, 24, 35, 0.03);
+    height: 60px;
+    position: relative;
+    margin: 0px -16px;
+}
+
+.DivProfileNameCoinInfo {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 0px;
+}
+.DivProfileImage {
+    background-image: url("https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/47c8980…~c5_720x720.jpeg?x-expires=1699610400&x-signature=rB82K7SHFtIu9INLu2Sr3wcY0SU%3D");
+    min-width: 40px;
+    height: 40px;
+    margin-left: 16px;
+
+    /* margin-left: 24px; */
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: center center / cover no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.DivNameCoinInfo {
+    margin-left: 8px;
+    min-width: 0px;
+}
+
+.NameInfo {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+}
+
+.DivCoinInfo {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.StyledCoinIcon {
+    margin-right: 2px;
+    width: 18px;
+    height: 18px;
+}
+.SpanCoinNum {
+    color: rgba(22, 24, 35, 0.5);
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.SpanLogoutButton {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.SpanLogoutText {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.DivRechargeCoins {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    margin-top: 16px;
+    line-height: 1.2;
+    font-size: 17px;
+}
+
+.DivRechargeAdvantageInfo {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    line-height: 25px;
+    display: inline-block;
+    margin-top: 12px;
+    color: rgb(254, 44, 85);
+    font-size: 16px;
+}
+
+.DivExplanationContainer {
+    display: inline-block;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+
+.StyledExclamationMarkCircleIcon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.DivCoinsBkgContainer {
+    margin: 12px 0px 10px;
+}
+
+.OlCoinsListContainer {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 100%;
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: repeat(auto-fit, minmax(max(96px, (100% - 24px) / 4), 1fr));
+    gap: 8px;
 }
-.line__height {
+
+.ButtonSmCoinContainer {
+    width: 100%;
+    position: relative;
+    min-height: 68px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    user-select: none;
+    cursor: pointer;
+    pointer-events: initial;
+    opacity: 1;
+    word-break: break-word;
+    padding: 2px 0px;
+    background-color: transparent;
+}
+.ButtonSmCoinContainer:active, .ButtonSmCoinContainer:focus {
+    border: 2px solid rgb(250, 206, 21);
+}
+
+.DivSmCoinNumContainer {
+    min-height: 24px;
+    display: flex;
+}
+
+.SpanSmCoinNumIcon {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.StyledSmCoinIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.SpanSmCoinNumDisplay {
+    font-family: TikTokDisplayFont, Arial, Tahoma, PingFangSC, sans-serif;
+    display: inline-flex;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(22, 24, 35);
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-right: 0px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.DivSmCoinTextContainer {
+    margin-top: 1px;
+}
+
+.DivSmCoinTextNow {
+    color: rgba(22, 24, 35, 0.5);
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-size: 12px;
+    margin-left: 0px;
+    text-align: center;
     line-height: 1;
 }
-footer {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+.DivPaymentIconsRow {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
 }
+
+.ImgPaymentIcon {
+    display: inline-block;
+}
+
+/* Main Ends */
+
+
+
+/* Footer Starts */
+
+.DivLayoutFooter {
+    width: 100%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    /* padding-bottom: env(safe-area-inset-bottom); */
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    z-index: 1;
+}
+
+.DivFooterContainer {
+    padding: 12px 16px 16px;
+}
+
+.DivCoinsTotalContainer {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: TikTokFont;
+}
+
+.CoinsTotalText {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(22, 24, 35);
+}
+
+.CoinsTotalAmount {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(22, 24, 35);
+    white-space: nowrap;
+    direction: ltr;
+    margin-left: 8px;
+}
+
+.DivButtonContainer {
+    width: 100%;
+    display: flex;
+}
+
+.StyledQuestionButton {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    color: rgb(22, 24, 35);
+    border-color: rgba(22, 24, 35, 0.12);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 6px 8px;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 8px;
+    margin-left: 0px;
+    height: 44px;
+    min-width: 44px;
+    width: 44px;
+}
+
+.DivQuestionWrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.StyledBuyButton {
+    border-radius: 2px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 44, 85);
+    min-width: 144px;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 6px 8px;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 0px;
+    height: 44px;
+    flex: 1 1 0%;
+}
+
+/* Footer Ends */
+
+/* Custom Modal Styles */
+
+.tt-sheet__container.high.visible {
+    transition: -webkit-transform .3s cubic-bezier(.25,0,.25,1);
+    transition: transform .3s cubic-bezier(.25,0,.25,1);
+    transition: transform .3s cubic-bezier(.25,0,.25,1),-webkit-transform .3s cubic-bezier(.25,0,.25,1);
+}
+
+.tt-sheet__container.high {
+    transition: -webkit-transform .35s cubic-bezier(.33,.86,.2,1);
+    transition: transform .35s cubic-bezier(.33,.86,.2,1);
+    transition: transform .35s cubic-bezier(.33,.86,.2,1),-webkit-transform .35s cubic-bezier(.33,.86,.2,1);
+}
+.tt-sheet__container.visible {
+    transition: -webkit-transform .25s cubic-bezier(.25,0,.25,1);
+    transition: transform .25s cubic-bezier(.25,0,.25,1);
+    transition: transform .25s cubic-bezier(.25,0,.25,1),-webkit-transform .25s cubic-bezier(.25,0,.25,1);
+}
+.tt-sheet__container {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: -webkit-transform .3s cubic-bezier(.33,.86,.2,1);
+    transition: transform .3s cubic-bezier(.33,.86,.2,1);
+    transition: transform .3s cubic-bezier(.33,.86,.2,1),-webkit-transform .3s cubic-bezier(.33,.86,.2,1);
+}
+.tt-sheet__header {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+}
+.TUXNavBar * {
+    transition: color .1s ease,background-color .1s ease;
+
+}
+.ePJla-D {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-inline-start: 8px;
+    transition: opacity 150ms ease 0s;
+    opacity: 1;
+}
+.eVvRjh {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0px 1px;
+    letter-spacing: inherit;
+    width: 100%;
+    line-height: 24px;
+    color: #000;
+    caret-color: transparent;
+    background: transparent;
+    outline: none;
+}
+.bVKQAh {
+    letter-spacing: inherit;
+    color: transparent;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+    background-color: initial;
+}
+.cfsGIz {
+    height: 20px;
+    width: 2px;
+    background: #fe2c55;
+    animation: 1s step-end 0s infinite normal none running hjENiF;
+    position: absolute;
+}
+
+
+/* ****** CUSTOM MODAL ENDS ******* */
+
+
+
+
+
+/***** ANIMATION   *******/
+
+@keyframes hjENiF {
+    0%, 100% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
