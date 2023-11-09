@@ -577,6 +577,84 @@ a:not([class]) {
     animation: 1s step-end 0s infinite normal none running hjENiF;
     position: absolute;
 }
+.dlPItp {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    padding: 4px 0px 16px;
+}
+.hvQCvS {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 50px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(22, 24, 35, .06);
+    border-radius: 2px;
+    color: #000;
+    font-family: TikTokFont;
+}
+.DivNegativeMargin {
+    margin: 0 -16px -16px;
+}
+.tiktok-16dswth-DivCoinsTotalContainer {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: TikTokFont;
+}
+.tiktok-19p50er-SpanCoinsTotalText {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(22, 24, 35);
+}
+.tiktok-lyumwd-SpanCoinsTotalMount {
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(22, 24, 35);
+    white-space: nowrap;
+    direction: ltr;
+    margin-left: 8px;
+}
+.tiktok-146s4m-DivButtonContainer {
+    width: 100%;
+    display: flex;
+}
+.tiktok-lf1nf1-Button-StyledBuyButton {
+    border-radius: 2px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 44, 85);
+    min-width: 144px;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 6px 8px;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 0px;
+    height: 44px;
+    flex: 1 1 0%;
+}
 
 
 /* ****** CUSTOM MODAL ENDS ******* */

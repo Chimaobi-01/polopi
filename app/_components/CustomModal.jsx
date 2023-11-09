@@ -4,6 +4,28 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 
 const CustomModal = ({ customModalState, closeCustomModal }) => {
+  const [arrayOfNumbers, setArrayOfNumbers] = useState([]);
+  const addValueToArray = (value) => {
+    if(value === 'triple'){
+      setArrayOfNumbers([...arrayOfNumbers, 0,0,0]);
+      return
+    }
+    setArrayOfNumbers([...arrayOfNumbers, value]);
+  };
+  const deleteValueFromArray = () => {
+    const updatedArray = [...arrayOfNumbers];
+    updatedArray.pop();
+    setArrayOfNumbers(updatedArray);
+  };
+  const commaSeperatedArray =
+    arrayOfNumbers.length > 3 && arrayOfNumbers.length <= 4
+      ? [].concat(arrayOfNumbers[0], ",", arrayOfNumbers.slice(1))
+      : arrayOfNumbers.length > 4 && arrayOfNumbers.length <= 5
+      ? [].concat(arrayOfNumbers.slice(0, 2), ",", arrayOfNumbers.slice(2))
+      : arrayOfNumbers.length > 5 && arrayOfNumbers.length <= 6
+      ? [].concat(arrayOfNumbers.slice(0, 3), ",", arrayOfNumbers.slice(3))
+      : [...arrayOfNumbers]
+
   return (
     <>
       <Transition appear show={customModalState} as={Fragment}>
@@ -132,9 +154,144 @@ const CustomModal = ({ customModalState, closeCustomModal }) => {
                             <input
                               placeholder="30 - 2,500,000"
                               className="eVvRjh"
+                              readOnly
+                              value={commaSeperatedArray.join("")}
                             />
                             <span className="bVKQAh"></span>
-                            <div className="cfsGIz ms-0"></div>
+                            <div
+                              className="cfsGIz"
+                              style={{ marginInlineStart: `0px` }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* error message or amount in dollars */}
+                      <div className="dlPItp">
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(1)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            1
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(2)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            2
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(3)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            3
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={deleteValueFromArray}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            <svg
+                              fill="currentColor"
+                              className="text-[rgba(0,0,0,.32)]"
+                              font-size="20px"
+                              viewBox="0 0 48 48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="1em"
+                              height="1em"
+                            >
+                              <path d="m16.54 8.5-12.46 11a6 6 0 0 0 0 9l12.46 11a6 6 0 0 0 3.97 1.5H40a6 6 0 0 0 6-6V13a6 6 0 0 0-6-6H20.51a6 6 0 0 0-3.97 1.5ZM26.17 24l-4.38-4.38a1 1 0 0 1 0-1.41l1.42-1.42a1 1 0 0 1 1.41 0L29 21.17l4.38-4.38a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1 0 1.41L31.83 24l4.38 4.38a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 0 1-1.41 0L29 26.83l-4.38 4.38a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 0-1.41L26.17 24Z"></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(4)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            4
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(5)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            5
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(6)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            6
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray('triple')}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            000
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(7)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            7
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(8)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            8
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(9)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            9
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => addValueToArray(0)}
+                            className="hvQCvS font-bold text-lg"
+                          >
+                            0
+                          </button>
+                        </div>
+                      </div>
+                      <div className="DivNegativeMargin">
+                        <div className="border border-[rgba(22,24,35,.12)] pt-3 px-4 pb-4">
+                          <div className="tiktok-16dswth-DivCoinsTotalContainer">
+                            <div className="flex items-center gap-1">
+                              <span className="tiktok-19p50er-SpanCoinsTotalText">
+                                Total
+                              </span>
+                            </div>
+                            <div>
+                              <span className="tiktok-lyumwd-SpanCoinsTotalMount">
+                                $ 1.31
+                              </span>
+                            </div>
+                          </div>
+                          <div className="tiktok-146s4m-DivButtonContainer">
+                            <button className="tiktok-lf1nf1-Button-StyledBuyButton">
+                              Recharge
+                            </button>
                           </div>
                         </div>
                       </div>
