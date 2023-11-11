@@ -62,8 +62,8 @@ const CustomModal = ({ customModalState, closeCustomModal }) => {
                               className="w-4 h-4"
                             >
                               <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                fillRule="evenodd"
+                                clipRule="evenodd"
                                 d="M24 6a18 18 0 100 36 18 18 0 000-36zM2 24a22 22 0 1144 0 22 22 0 01-44 0zm22.1-9c-1.93 0-3.76 1.23-4.84 3.61-.23.5-.79.79-1.31.62l-1.9-.64a.94.94 0 01-.6-1.25C16.98 13.7 20.05 11 24.1 11A7.9 7.9 0 0132 18.9c0 2.31-1.21 4.56-2.78 6.17A10.2 10.2 0 0123 27.95c-.55.05-1-.4-1-.95v-2c0-.55.45-1 1-1.08 1.23-.2 2.5-.77 3.35-1.64A5.27 5.27 0 0028 18.91 3.9 3.9 0 0024.1 15zM24 36a3 3 0 110-6 3 3 0 010 6z"
                               ></path>
                             </svg>
@@ -83,8 +83,8 @@ const CustomModal = ({ customModalState, closeCustomModal }) => {
                               height="1em"
                             >
                               <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                fillRule="evenodd"
+                                clipRule="evenodd"
                                 d="M21.17 24l-7.88-7.88a1 1 0 010-1.41l1.42-1.42a1 1 0 011.41 0L24 21.17l7.88-7.88a1 1 0 011.41 0l1.42 1.42a1 1 0 010 1.41L26.83 24l7.88 7.88a1 1 0 010 1.41l-1.42 1.42a1 1 0 01-1.41 0L24 26.83l-7.88 7.88a1 1 0 01-1.41 0l-1.42-1.42a1 1 0 010-1.41L21.17 24z"
                               ></path>
                             </svg>
@@ -139,8 +139,8 @@ const CustomModal = ({ customModalState, closeCustomModal }) => {
                             fill="#FACE15"
                           ></circle>
                           <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z"
                             fill="#FABC15"
                           ></path>

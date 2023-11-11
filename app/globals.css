@@ -165,7 +165,7 @@ a:not([class]) {
 
 .DivLayoutEntity {
     width: 100%;
-    padding: 65px 16px 125px;
+    padding: 65px 16px 0;
     overflow: hidden auto;
     box-sizing: border-box;
     flex: 1 1 auto;
