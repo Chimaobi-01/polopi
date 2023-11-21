@@ -272,7 +272,7 @@ const MainLayoutEntity = ({ priceList, handleTotalChange }) => {
 
 const FooterLayout = ({ total }) => {
   return (
-    <footer className="DivLayoutFooter flex-1">
+    <footer className="DivLayoutFooter absolute bottom-0">
         <div className="DivFooterContainer">
           <div className="DivCoinsTotalContainer">
             <div className="flex items-center gap-1">
