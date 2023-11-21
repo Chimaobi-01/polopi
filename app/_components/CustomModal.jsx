@@ -303,7 +303,7 @@ const CustomModalButtonLayout = ({ deleteValueFromArray, addValueToArray }) => {
 const CustomModalFooterLayout = () => {
   return (
     <div className="DivNegativeMargin">
-      <div className="border border-[rgba(22,24,35,.12)] pt-3 px-4 pb-4">
+      <div className="border border-[rgba(22,24,35,.12)] p-4">
         <div className="tiktok-16dswth-DivCoinsTotalContainer">
           <div className="flex items-center gap-1">
             <span className="tiktok-19p50er-SpanCoinsTotalText">Total</span>
