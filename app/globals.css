@@ -98,7 +98,7 @@ a:not([class]) {
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     width: 100vw;
 }
 
@@ -106,9 +106,9 @@ a:not([class]) {
 
 .HeaderLayout {
     display: flex;
-    position: fixed;
+    position: relative;
     width: 100%;
-    top: 0px;
+    /* top: 0px; */
     height: 44px;
     background: rgb(255, 255, 255);
     border-bottom: 1px solid rgba(22, 24, 35, 0.2);
@@ -165,7 +165,7 @@ a:not([class]) {
 
 .DivLayoutEntity {
     width: 100%;
-    padding: 65px 16px 0;
+    padding: 20px 16px 0;
     overflow: hidden auto;
     box-sizing: border-box;
     flex: 1 1 auto;
@@ -195,18 +195,19 @@ a:not([class]) {
     min-width: 0px;
 }
 .DivProfileImage {
-    background-image: url("https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/47c8980…~c5_720x720.jpeg?x-expires=1699610400&x-signature=rB82K7SHFtIu9INLu2Sr3wcY0SU%3D");
-    min-width: 40px;
-    height: 40px;
+    /* background-image: url("https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/47c8980…~c5_720x720.jpeg?x-expires=1699610400&x-signature=rB82K7SHFtIu9INLu2Sr3wcY0SU%3D"); */
+    /* min-width: 40px;
+    height: 40px; */
     margin-left: 16px;
 
     /* margin-left: 24px; */
     position: relative;
-    width: 32px;
-    height: 32px;
-    background: center center / cover no-repeat;
+    width: 40px;
+    height: 40px;
+    background: center center / cover no-repeat url('./_assets/polopi.jpg');
     border-radius: 50%;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .DivNameCoinInfo {
@@ -583,7 +584,7 @@ a:not([class]) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 8px;
-    padding: 4px 0px 16px;
+    padding: 4px 1rem 16px;
 }
 .hvQCvS {
     display: flex;

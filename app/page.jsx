@@ -10,6 +10,7 @@ import maestro from './_assets/maestro.png'
 import paypal from './_assets/paypal.png'
 import { useState } from 'react';
 import CustomModal from './_components/CustomModal';
+import polopi from '@/app/_assets/polopi.jpg'
 
 
 const Home = () => {
@@ -71,49 +72,72 @@ const Home = () => {
 
   return (
     <div className="DivLayoutContainer">
-      <header className="HeaderLayout">
-        <div className="DivBackButton">
+      <HeaderLayout />
+      <MainLayoutEntity 
+        priceList={priceList}
+        handleTotalChange={handleTotalChange}
+      />
+      <FooterLayout 
+        total={total}
+      />
+
+      
+
+      <CustomModal 
+        customModalState={customModalState}
+        closeCustomModal={closeCustomModal}
+      />
+    </div>
+  );
+};
+
+const HeaderLayout = () => {
+  return (
+    <header className="HeaderLayout">
+    <div className="DivBackButton">
+      <svg
+        className="w-5 h-5"
+        
+        data-e2e=""
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4.58579 22.5858L20.8787 6.29289C21.2692 5.90237 21.9024 5.90237 22.2929 6.29289L23.7071 7.70711C24.0976 8.09763 24.0976 8.7308 23.7071 9.12132L8.82843 24L23.7071 38.8787C24.0976 39.2692 24.0976 39.9024 23.7071 40.2929L22.2929 41.7071C21.9024 42.0976 21.2692 42.0976 20.8787 41.7071L4.58579 25.4142C3.80474 24.6332 3.80474 23.3668 4.58579 22.5858Z"
+        ></path>
+      </svg>
+    </div>
+    <div className="DivLayoutTitle">Get Coins</div>
+    <div className="DivExtraButton">
+      <div className="flex items-center">
+        <a href="#">
           <svg
-            className="tiktok-m8n5x3-StyledArrowIcon e1t7jvfs7"
-            width="1em"
-            data-e2e=""
-            height="1em"
-            viewBox="0 0 48 48"
-            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 21 21"
+            
+            className=" w-5 h-5"
           >
             <path
+              fill="black"
               fillRule="evenodd"
+              d="M.25 2a2 2 0 012-2h12a2 2 0 012 2v3a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5V2h-12v14h3a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-3a2 2 0 01-2-2V2zM14 9a5 5 0 100 10 5 5 0 000-10zm-7 5a7 7 0 1114 0 7 7 0 01-14 0zm10.41-2.386c-.831 0-1.446-.643-1.446-1.364h-2v4.826c0 .34-.296.674-.732.674s-.732-.334-.732-.674.296-.675.732-.675v-2c-1.477 0-2.732 1.166-2.732 2.675 0 1.508 1.255 2.674 2.732 2.674 1.477 0 2.732-1.166 2.732-2.674v-1.773c.442.2.932.31 1.445.31v-2zM4.5 5.5A.5.5 0 015 5h4.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5v-1zM5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1A.5.5 0 006 9H5z"
               clipRule="evenodd"
-              d="M4.58579 22.5858L20.8787 6.29289C21.2692 5.90237 21.9024 5.90237 22.2929 6.29289L23.7071 7.70711C24.0976 8.09763 24.0976 8.7308 23.7071 9.12132L8.82843 24L23.7071 38.8787C24.0976 39.2692 24.0976 39.9024 23.7071 40.2929L22.2929 41.7071C21.9024 42.0976 21.2692 42.0976 20.8787 41.7071L4.58579 25.4142C3.80474 24.6332 3.80474 23.3668 4.58579 22.5858Z"
             ></path>
           </svg>
-        </div>
-        <div className="DivLayoutTitle">Get Coins</div>
-        <div className="DivExtraButton">
-          <div className="flex items-center">
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 21 21"
-                width="1em"
-                height="1em"
-                className="tiktok-1i6s8qb-StyledTransactionHistoryIcon e1xyt5ek3"
-              >
-                <path
-                  fill="black"
-                  fillRule="evenodd"
-                  d="M.25 2a2 2 0 012-2h12a2 2 0 012 2v3a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5V2h-12v14h3a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-3a2 2 0 01-2-2V2zM14 9a5 5 0 100 10 5 5 0 000-10zm-7 5a7 7 0 1114 0 7 7 0 01-14 0zm10.41-2.386c-.831 0-1.446-.643-1.446-1.364h-2v4.826c0 .34-.296.674-.732.674s-.732-.334-.732-.674.296-.675.732-.675v-2c-1.477 0-2.732 1.166-2.732 2.675 0 1.508 1.255 2.674 2.732 2.674 1.477 0 2.732-1.166 2.732-2.674v-1.773c.442.2.932.31 1.445.31v-2zM4.5 5.5A.5.5 0 015 5h4.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5v-1zM5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1A.5.5 0 006 9H5z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </header>
+        </a>
+      </div>
+    </div>
+  </header>
+  )
+}
 
-      <main className="DivLayoutEntity">
+const MainLayoutEntity = ({ priceList, handleTotalChange }) => {
+  return (
+    <main className="DivLayoutEntity">
         <div className="DivBannerWrapper">
           <div className="DivProfileInfoWrapper">
             <div className="DivProfileNameCoinInfo">
@@ -122,7 +146,8 @@ const Home = () => {
                 aria-controls
                 className="DivProfileImage"
                 role="button"
-              ></div>
+              >
+              </div>
               <div className="DivNameCoinInfo">
                 <p className="NameInfo">Anonymous</p>
                 <div className="DivCoinInfo">
@@ -242,8 +267,12 @@ const Home = () => {
         <Image height={14} width={22} src={paypal} alt="paypal" className="ImgPaymentIcon " />
         </div>
       </main>
+  )
+}
 
-      <footer className="DivLayoutFooter">
+const FooterLayout = ({ total }) => {
+  return (
+    <footer className="DivLayoutFooter">
         <div className="DivFooterContainer">
           <div className="DivCoinsTotalContainer">
             <div className="flex items-center gap-1">
@@ -277,17 +306,13 @@ const Home = () => {
           </div>
         </div>
       </footer>
+  )
+}
 
 
 
-      {/* custom modal container  */}
-      <CustomModal 
-        customModalState={customModalState}
-        closeCustomModal={closeCustomModal}
-      />
-    </div>
-  );
-};
+
+
 
 export default Home;
 
